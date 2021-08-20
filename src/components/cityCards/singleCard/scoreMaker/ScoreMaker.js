@@ -1,3 +1,4 @@
+import "./ScoreMaker.scss";
 const ScoreMaker = ({ score }) => {
   const backgroundPicker = (score) => {
     if (score < 3) {
@@ -14,7 +15,7 @@ const ScoreMaker = ({ score }) => {
 
   return (
     <div className="score__card">
-      <h3>{name}</h3>
+      <h4>{name}</h4>
       <div className="all__bar">
         <div
           className={`progress__bar ${backgroundPicker(score_out_of_10)}`}

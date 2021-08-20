@@ -4,7 +4,8 @@ import "./SingleCard.scss";
 
 const SingleCard = ({ city }) => {
   console.log(city);
-  const { scores, mainInfo, deatailes } = city;
+  const { scores, mainInfo, deatailes, img } = city;
+  const backImg = img ? img.web : null;
   const summText = scores.summary ? (
     <div
       dangerouslySetInnerHTML={{ __html: scores.summary }}
@@ -16,10 +17,20 @@ const SingleCard = ({ city }) => {
 
   return (
     <div className="single__card">
+      <div
+        className="card__title"
+        style={{ backgroundImage: `url(${backImg})` }}
+      >
+        <h2 className="title__text">
+          {mainInfo ? mainInfo.name : "Не найденно"}{" "}
+        </h2>
+      </div>
       {summText}
-      {scores.categories.map((category) => (
-        <ScoreMaker score={category} />
-      ))}
+      <div className="card__score">
+        {scores.categories.map((category) => (
+          <ScoreMaker score={category} />
+        ))}
+      </div>
       <InfoMaker info={deatailes} />
     </div>
   );

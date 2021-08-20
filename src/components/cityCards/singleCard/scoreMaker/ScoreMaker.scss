@@ -1,0 +1,23 @@
+.all__bar {
+ width: 100%;
+ height: 10px !important;
+ background-color: gray;
+ border-radius: 0.4em;
+
+ .progress__bar {
+  border-radius: 0.4em;
+  height: 10px !important;
+ }
+
+ .score__bad {
+  background-image: linear-gradient(to right, #870000, #190a05);
+ }
+
+ .score__ok {
+  background: linear-gradient(to right, #ff9e00, #ff6d00);
+ }
+
+ .score__good {
+  background-image: linear-gradient(to right, #00b09b, #96c93d);
+ }
+}

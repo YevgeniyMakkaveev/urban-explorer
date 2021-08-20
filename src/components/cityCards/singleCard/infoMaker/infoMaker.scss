@@ -1,0 +1,10 @@
+.card__extra{
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ align-items: center;
+ .cost__item__wrap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+ }
+}

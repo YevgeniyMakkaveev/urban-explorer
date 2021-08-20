@@ -1,3 +1,4 @@
+import "./infoMaker.scss";
 const InfoMaker = ({ info }) => {
   const sizeInfo = info[1];
   const costInfo = info[3];
@@ -6,11 +7,11 @@ const InfoMaker = ({ info }) => {
   const sizeHandler = (sizeInfo) => {
     const { label, data } = sizeInfo;
     return (
-      <div>
+      <div className="extra__size">
         <p> {label}</p>
         {data.map((field) => (
           <div key={field.id}>
-            {field.float_value} {field.label}
+            {field.float_value.toFixed(2)} {field.label}
           </div>
         ))}
       </div>
@@ -23,38 +24,34 @@ const InfoMaker = ({ info }) => {
     for (let i = 1; i < data.length; i++) {
       arr.push(data[i]);
     }
-
     return (
-      <div>
+      <div className="extra__cost">
         <p>{label}</p>
-        {arr.map((field) => (
-          <div>
-            {field.currency_dollar_value} {field.label}
-          </div>
-        ))}
+        <div className="cost__item__wrap">
+          {arr.map((field) => (
+            <div className="extra__cost__item" key={field.id}>
+              {` ${field.currency_dollar_value} for a ${field.label}`}
+            </div>
+          ))}
+        </div>
       </div>
     );
   };
+
   const economyHandler = (economy) => {
     const { label, data } = economy;
     const money = data[0];
     const exchange = data[1];
     return (
-      <div>
+      <div className="extra__economy">
         <p>{label}</p>
-        <div>
-          {money.label}
-          {money.string_value}
-        </div>
-        <div>
-          {exchange.float_value}
-          {exchange.label}
-        </div>
+        <div>{`${money.label} ${money.string_value}`}</div>
+        <div>{`${exchange.float_value.toFixed(2)} ${exchange.label}`}</div>
       </div>
     );
   };
   return (
-    <div>
+    <div className="card__extra">
       {sizeHandler(sizeInfo)}
       {costHandler(costInfo)}
       {economyHandler(economyInfo)}
