@@ -3,8 +3,12 @@ import axios from "axios";
 import { fetchSearch } from "./SearchSlicer";
 
 const callApi = async (link) => {
-  const { data } = await axios.get(`${link}`);
-  return data;
+  try {
+    const { data } = await axios.get(`${link}`);
+    return data;
+  } catch (error) {
+    console.error(error);
+  }
 };
 
 export const fetchCity = createAsyncThunk(
@@ -73,7 +77,11 @@ const getCity = createSlice({
     },
   },
   extraReducers: {
-    [fetchSearch.rejected]: (state, action) => {
+    [fetchCity.pending]: (state) => {
+      state.loading = true;
+      state.errorMsg = false;
+    },
+    [fetchCity.rejected]: (state, action) => {
       state.loading = false;
       state.errorMsg = action.payload;
     },

@@ -20,10 +20,14 @@ const InfoMaker = ({ info }) => {
 
   const costHandler = (cost) => {
     const { label, data } = cost;
+
     let arr = [];
     for (let i = 1; i < data.length; i++) {
       arr.push(data[i]);
     }
+    arr.sort((a, b) => {
+      return a.label.length - b.label.length;
+    });
     return (
       <div className="extra__cost">
         <p>{label}</p>

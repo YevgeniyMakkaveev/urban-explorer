@@ -6,7 +6,7 @@ import "./Map.css";
 const MapComponent = () => {
   const state = useSelector((state) => state.city);
   const { currentView, city } = state;
-
+  let innerId = 2000;
   const ChangeView = ({ location, zoom }) => {
     const map = useMap();
     if (location) {
@@ -18,7 +18,7 @@ const MapComponent = () => {
   const createMarkers = (dots) => {
     if (dots) {
       return dots.map((dot) => (
-        <Marker position={dot.mainInfo.position}>
+        <Marker key={innerId++} position={dot.mainInfo.position}>
           <Popup>{dot.mainInfo.name}</Popup>
         </Marker>
       ));

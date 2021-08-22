@@ -4,6 +4,7 @@ import { Element } from "react-scroll";
 import "./SingleCard.scss";
 
 const SingleCard = ({ city }) => {
+  let innerId = 1500;
   console.log(city);
   const { scores, mainInfo, deatailes, img } = city;
   const backImg = img ? img.mobile : null;
@@ -15,6 +16,12 @@ const SingleCard = ({ city }) => {
   ) : (
     <div className="card__summ">Description not found.</div>
   );
+
+  const scoreShow = scores
+    ? scores.categories.map((category) => (
+        <ScoreMaker key={innerId++} score={category} />
+      ))
+    : "No Categories";
 
   return (
     <Element name={city.id}>
@@ -29,12 +36,8 @@ const SingleCard = ({ city }) => {
         </div>
         <div className="card__body">
           {summText}
-          <div className="card__score">
-            {scores.categories.map((category) => (
-              <ScoreMaker score={category} />
-            ))}
-          </div>
-          <InfoMaker info={deatailes} />
+          <div className="card__score">{scoreShow}</div>
+          <InfoMaker key={innerId++} info={deatailes} />
         </div>
       </div>
     </Element>
