@@ -42,7 +42,7 @@ const HideItems = () => {
       >
         <p className="link to__top__color">To top</p>
       </Link>
-      {refMaker(city)}
+      <div className="link__other">{refMaker(city)}</div>
     </div>
   );
 };

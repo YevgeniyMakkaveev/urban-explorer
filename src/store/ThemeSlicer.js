@@ -9,7 +9,6 @@ const themeSlice = createSlice({
     selectTheme(state, action) {
       const { theme } = action.payload;
       state.currentTheme = theme;
-      console.log(state.currentTheme);
     },
   },
 });

@@ -13,7 +13,6 @@ function App() {
   const { errorMsg } = useSelector((state) => state.search);
   const loadingInit = useSelector((state) => state.search.loading);
   const cityLoad = useSelector((state) => state.city.loading);
-  console.log(cityLoad);
   const initSpinner = loadingInit ? (
     <LoaderSpinner text="Loading initial data" />
   ) : null;

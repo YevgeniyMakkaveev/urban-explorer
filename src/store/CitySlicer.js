@@ -63,7 +63,6 @@ const getCity = createSlice({
       const { res, view } = action.payload;
       state.city = res;
       state.currentView = view;
-      console.log(state.city, state.currentView);
       state.loading = null;
     },
     resetData(state) {

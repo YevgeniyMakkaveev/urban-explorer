@@ -5,7 +5,6 @@ import "./SingleCard.scss";
 
 const SingleCard = ({ city }) => {
   let innerId = 1500;
-  console.log(city);
   const { scores, mainInfo, deatailes, img } = city;
   const backImg = img ? img.mobile : null;
   const summText = scores.summary ? (

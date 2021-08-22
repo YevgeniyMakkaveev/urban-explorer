@@ -31,7 +31,6 @@ const searchSlice = createSlice({
       const { res } = action.payload;
       state.loading = false;
       state.initArr = res;
-      console.log(state.initArr);
     },
     resetSearch(state) {
       state.loading = null;

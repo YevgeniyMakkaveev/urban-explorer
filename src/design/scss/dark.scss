@@ -8,7 +8,7 @@
 
   .title__color {
     text-shadow: 0.022em 0.022em 0.022em $dTheme2;
-    color: $dColourNeon;
+    color: $dColorNeon;
   }
   .sidebar,
   .main__content {
@@ -32,11 +32,11 @@
   .sidebar {
     .button__color {
       background-color: $dTheme2;
-      box-shadow: 0 10px 10px ($dColourNeon);
+      box-shadow: 0 10px 10px ($dColorNeon);
       border: $dTheme1 solid 0.02em;
     }
     .to__top__color {
-      color: $dColourNeon;
+      color: $dColorNeon;
     }
   }
   .card__color {
@@ -47,5 +47,10 @@
       background-color: rgba(0, 0, 0, 0.5);
       background-blend-mode: multiply;
     }
+     .card__text__title {
+       text-shadow: 0.022em 0.022em 0.022em rgb(255, 252, 252);
+       color: $dColorNeon;
+       ;
+     }
   }
 }
