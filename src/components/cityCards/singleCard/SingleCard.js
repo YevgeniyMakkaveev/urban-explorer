@@ -1,5 +1,5 @@
 import ScoreMaker from "./scoreMaker";
-import InfoMaker from "./infoMaker/InfoMaker";
+import InfoMaker from "./infoMaker/InformMaker";
 import { Element } from "react-scroll";
 import "./SingleCard.scss";
 

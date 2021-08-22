@@ -1,2 +1,2 @@
-import CityCard from "./cityCards";
+import CityCard from "./Cards";
 export default CityCard;

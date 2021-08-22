@@ -1,4 +1,4 @@
-import "./infoMaker.scss";
+import "./InformMaker.scss";
 const InfoMaker = ({ info }) => {
   const sizeInfo = info[1];
   const costInfo = info[3];

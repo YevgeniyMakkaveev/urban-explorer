@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
-import SingleCard from "./singleCard/";
-import "./cityCards.scss";
+import SingleCard from "./singleCard";
+import "./Cards.scss";
 
 const CityCard = () => {
   const { city } = useSelector((state) => state.city);
