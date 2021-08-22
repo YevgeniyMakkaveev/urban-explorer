@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Element } from "react-scroll";
-import { handleSearch } from "../../store/SearchSlicer";
 import { selectTheme } from "../../store/ThemeSlicer";
 import ResultList from "./selector";
 import "./Head.scss";
@@ -18,7 +17,6 @@ const Head = () => {
   const onChange = (e) => {
     e.preventDefault();
     setSearch(e.target.value);
-    dispatch(handleSearch({ search: search }));
   };
   const changeTheme = (theme) => {
     dispatch(selectTheme({ theme: theme }));
@@ -59,7 +57,7 @@ const Head = () => {
           />
         </form>
       </div>
-      <ResultList submit={setSearch} />
+      <ResultList search={search} submit={setSearch} />
     </div>
   );
 };

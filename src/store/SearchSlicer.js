@@ -32,15 +32,6 @@ const searchSlice = createSlice({
       state.loading = false;
       state.initArr = res;
     },
-    resetSearch(state) {
-      state.loading = null;
-      state.errorMsg = null;
-      state.searchParam = null;
-    },
-    handleSearch(state, action) {
-      const { search } = action.payload;
-      state.searchParam = search;
-    },
   },
   extraReducers: {
     [fetchSearch.pending]: (state) => {
