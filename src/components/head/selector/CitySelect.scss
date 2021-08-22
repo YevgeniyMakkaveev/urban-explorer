@@ -1,0 +1,12 @@
+.reslist {
+  position: absolute;
+  right: 5em;
+  top: 350px;
+  min-width: 175px;
+
+  text-align: center;
+  .reslist__item {
+    text-align: center;
+    cursor: pointer;
+  }
+}

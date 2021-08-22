@@ -3,8 +3,11 @@
  flex-direction: row;
  justify-content: center;
  align-items: center;
+ font-size: 0.8em;
  .cost__item__wrap {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 50px;
  }
+
 }

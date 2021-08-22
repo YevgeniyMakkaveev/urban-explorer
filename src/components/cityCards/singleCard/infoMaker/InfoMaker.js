@@ -30,7 +30,9 @@ const InfoMaker = ({ info }) => {
         <div className="cost__item__wrap">
           {arr.map((field) => (
             <div className="extra__cost__item" key={field.id}>
-              {` ${field.currency_dollar_value} for a ${field.label}`}
+              <p>{` ${
+                field.currency_dollar_value
+              }$ for ${field.label.toLowerCase()} `}</p>
             </div>
           ))}
         </div>

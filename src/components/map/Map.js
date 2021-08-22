@@ -16,7 +16,6 @@ const MapComponent = () => {
   };
 
   const createMarkers = (dots) => {
-    console.log(dots, "njxrb");
     if (dots) {
       return dots.map((dot) => (
         <Marker position={dot.mainInfo.position}>
@@ -27,16 +26,21 @@ const MapComponent = () => {
       return null;
     }
   };
+  const chooseCenter = () => {
+    if (currentView) {
+      return currentView;
+    } else return [55.75, 37.61];
+  };
 
   return (
     <>
-      <MapContainer center={[10, 10]} zoom={6}>
+      <MapContainer center={chooseCenter()} zoom={9}>
         <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         {createMarkers(city)}
-        <ChangeView location={currentView} zoom={12} />
+        <ChangeView location={currentView} zoom={11} />
       </MapContainer>
     </>
   );

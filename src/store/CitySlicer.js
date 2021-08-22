@@ -23,11 +23,13 @@ export const fetchCity = createAsyncThunk(
       const view = [(geo.south + geo.north) / 2, (geo.east + geo.west) / 2];
       const geoData = {
         name: init.full_name,
+        link: init._links.self.href,
         continent: init.continent,
         position: view,
       };
       const finalData = [
         {
+          id: init.ua_id,
           mainInfo: geoData,
           scores: scores,
           deatailes: details.categories,
@@ -65,6 +67,10 @@ const getCity = createSlice({
       state.loading = null;
       state.errorMsg = null;
     },
+    getView(state, action) {
+      const view = action.payload;
+      state.currentView = view;
+    },
   },
   extraReducers: {
     [fetchSearch.rejected]: (state, action) => {
@@ -75,4 +81,5 @@ const getCity = createSlice({
 });
 
 const { getData } = getCity.actions;
+export const { getView } = getCity.actions;
 export default getCity.reducer;

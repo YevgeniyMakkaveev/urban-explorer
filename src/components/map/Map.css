@@ -1,5 +1,4 @@
 .leaflet-container {
- position: sticky;
- width: 40vw;
+ width: 500px;
  height: 500px;
 }

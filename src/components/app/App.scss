@@ -1,12 +1,23 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap");
+@import "../../design/scss/_normi.scss";
+@import "../../design/scss/blue.scss";
+@import "../../design/scss/dark.scss";
 * {
   font-family: "Rubik", sans-serif;
 }
 
 .App {
   text-align: center;
- 
+  display: flex;
+  min-height: 100vh;
+  align-items: stretch;
+ .main__content{
+   flex-direction: column;
+   width: 100%;
+   display: flex;
+   
+ }
 }
 
 
