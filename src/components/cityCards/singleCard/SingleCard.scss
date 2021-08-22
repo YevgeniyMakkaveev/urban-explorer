@@ -1,36 +1,68 @@
-.single__card{
- // background-color: #2B2B2B;
-margin: 1em 2em;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-border-radius:  3em;
-min-width: 500px;
-max-width: 850px;
-min-height: 800px;
-flex-grow: 2;
-
-.card__title {
-  height: 10em;
-  width: 100%;
-  display: flex;
-  border-radius: 3em 3em 0 0;
-  justify-content: center;
-  align-items: center;
-  background-size:cover;
-  background-position: center;
-}
-.card__body{
-  margin: 0 2em;
-  justify-content: space-between;
+@import "../../../design/scss/const";
+.single__card {
+  margin: 1em 2em;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  border-radius: 3em;
+  min-width: 400px;
+  max-width: 850px;
+  flex-grow: 2;
 
-}
- .card__score{
-   display: grid;
-   grid-template-columns: repeat(4, 1fr);
-   gap: 0.5em;
- }
-}
 
+  .card__title {
+    height: 10em;
+    width: 100%;
+    display: flex;
+    border-radius: 3em 3em 0 0;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+  }
+  .title__text {
+    font-weight: 700;
+    font-size: 1.5em;
+  }
+
+  .card__body {
+    display: flex;
+    flex-direction: column;
+  }
+  .card__extra,
+  .card__summ{
+    font-size: 0.7em;
+  }
+  .card__score {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5em;
+  }
+}
+@media screen and (min-width: $breakpoint-tablet) {
+  .single__card {
+     max-width: 600px !important;
+  }
+  .card__summ,
+  .card__body {
+    margin: 0 2em;
+  }
+   .card__summ {
+     font-size: 0.8em !important;
+   }
+  .card__score {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+@media screen and (min-width: $breakpoint-pc) {
+  .single__card {
+    min-height: 800px !important;
+    max-width: 800px !important;
+  }
+.card__summ {
+  font-size: 1em !important;
+}
+  .card__score {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+}

@@ -34,8 +34,8 @@ const SingleCard = ({ city }) => {
             {mainInfo ? mainInfo.name : "Не найденно"}{" "}
           </h2>
         </div>
+        {summText}
         <div className="card__body">
-          {summText}
           <div className="card__score">{scoreShow}</div>
           <InfoMaker key={innerId++} info={deatailes} />
         </div>

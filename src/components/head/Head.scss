@@ -1,3 +1,4 @@
+@import "../../design/scss/const";
 .app__title {
   width: 100%;
   height: 20em !important;
@@ -39,14 +40,49 @@
 .search__wrapper {
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   .search__list {
-    margin: 0 5em;
     position: relative;
     display: inline-block;
   }
+  .search__input{
+    width: 20em;
+  }
   .title__text {
     font-weight: 700;
+  }
+}
+@media screen and (min-width: $breakpoint-tablet) {
+.search__wrapper {
+justify-content: flex-end !important;
+align-items: flex-end !important;
+  }
+  .search__wrapper:first-child{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.search__list{
+  margin: 0 5em;
+  width: auto !important;
+}
+.title__text{
+  display: block;
+ align-self: center;
+}
+  .search__input {
+    width: auto !important;
+  }
+}
+@media screen and (min-width: $breakpoint-pc){
+  .search__wrapper {
+    flex-direction: row !important;
+    justify-content: flex-end;
+  }
+  .search__input {
+    min-width: 175 !important;
   }
 }

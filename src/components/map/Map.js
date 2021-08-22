@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { MapContainer, TileLayer, Marker, useMap, Popup } from "react-leaflet";
 import { useSelector } from "react-redux";
-import "./Map.css";
+import "./Map.scss";
 
 const MapComponent = () => {
   const state = useSelector((state) => state.city);

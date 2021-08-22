@@ -4,7 +4,6 @@ import "./cityCards.scss";
 
 const CityCard = () => {
   const { city } = useSelector((state) => state.city);
-  let innerId = 1000;
   if (!city) {
     return <></>;
   }

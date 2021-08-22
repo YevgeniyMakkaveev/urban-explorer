@@ -1,0 +1,16 @@
+@import "../../design/scss/_const.scss";
+
+
+@media screen and (min-width: $breakpoint-tablet) {
+ .leaflet-container {
+  width: 300px !important;
+  height: 300px !important;
+ }
+}
+
+@media screen and (min-width: $breakpoint-pc) {
+ .leaflet-container {
+  width: 500px !important;
+  height: 500px !important;
+ }
+}

@@ -1,12 +1,28 @@
+@import "../../../design/scss/const";
+
 .reslist {
   position: absolute;
-  right: 5em;
-  top: 350px;
+  right: 44%;
+  top: 375px;
   min-width: 175px;
-
   text-align: center;
   .reslist__item {
     text-align: center;
     cursor: pointer;
   }
+}
+@media screen and (min-width: $breakpoint-tablet) {
+  .reslist {
+      right: 5.1em;
+      top: 23.5em;
+      min-width: 175px;
+  }
+}
+
+@media screen and (min-width: $breakpoint-pc) {
+    .reslist {
+      right: 5em;
+      top: 22em;
+      min-width: 175px;
+    }
 }

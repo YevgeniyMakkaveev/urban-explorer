@@ -4,7 +4,7 @@ import { fetchSearch } from "../../store/SearchSlicer";
 import Head from "../head";
 import CityCard from "../cityCards";
 import Sidebar from "../sidebar";
-import LoaderSpinner from "../../loader";
+import LoaderSpinner from "../loader";
 import "./App.scss";
 
 function App() {

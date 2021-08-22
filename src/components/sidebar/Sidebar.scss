@@ -1,39 +1,48 @@
-.sidebar{
-  float: right;
-   min-height: 100vh;
-   min-width: 60px;
-   display: flex;
-   flex-direction: row;
-   background-color: gray;
-   flex-shrink: 0;
-   .test{
+@import "../../design/scss/const";
+.sidebar {
+  display: none !important;
+  min-height: 100vh;
+  min-width: 60px;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  .test {
     position: fixed;
-   }
-
- .arrow__left, 
- .arrow__right{
-   background-size: 60%;
-   background-position: center;
-   background-repeat: no-repeat;
- }
- .arrow__left{
-background-image: url(../../design/imgs/arrow-left.png);
- }
-  .arrow__right{
-background-image: url(../../design/imgs/arrow-right.png);
-
   }
- .sidebar__button{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   margin: 1em 0;
-  border-radius: 50%;
-  min-width: 55px;
-  min-height: 55px;
 
- }
+  .arrow__left,
+  .arrow__right {
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .arrow__left {
+    background-image: url(../../design/imgs/arrow-left.png);
+  }
+  .arrow__right {
+    background-image: url(../../design/imgs/arrow-right.png);
+  }
+  .sidebar__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em 0;
+    border-radius: 50%;
+    min-width: 55px;
+    min-height: 55px;
+  }
 }
-   .push__content {
+
+@media screen and (min-width: $breakpoint-tablet) {
+  .sidebar {
+    display: block !important;
+  }
+  .push__content {
+    width: 330px !important;
+  }
+}
+@media screen and (min-width: $breakpoint-pc) {
+  .push__content {
     width: 530px !important;
-   }
+  }
+}
