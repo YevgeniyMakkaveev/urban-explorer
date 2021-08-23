@@ -14,7 +14,6 @@ const themeSlice = createSlice({
     openMap(state) {
       const prev = state.modalMap;
       state.modalMap = !prev;
-      console.log(state.modalMap);
     },
   },
 });
