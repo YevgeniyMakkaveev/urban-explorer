@@ -22,6 +22,9 @@
     color: aliceblue;
     border: none;
   }
+  input:focus {
+    outline: solid $dColorNeon;
+  }
   .reslist__color {
     background-color: $dCardColor;
     .reslist__e__color {
@@ -29,15 +32,22 @@
       color: white;
     }
   }
+  .button__color {
+    background-color: $dTheme2;
+    box-shadow: 0 10px 10px ($dColorNeon);
+    border: $dTheme1 solid 0.02em;
+  }
   .sidebar {
-    .button__color {
-      background-color: $dTheme2;
-      box-shadow: 0 10px 10px ($dColorNeon);
-      border: $dTheme1 solid 0.02em;
-    }
     .to__top__color {
       color: $dColorNeon;
     }
+  }
+  .special__button__text {
+    color: $dColorNeon;
+  }
+  .modal__map__bg {
+    background-color: $dCardColor;
+    border: 0.2em solid $dTheme2;
   }
   .card__color {
     border: 0.2em solid $dTheme2;
@@ -47,10 +57,9 @@
       background-color: rgba(0, 0, 0, 0.5);
       background-blend-mode: multiply;
     }
-     .card__text__title {
-       text-shadow: 0.022em 0.022em 0.022em rgb(255, 252, 252);
-       color: $dColorNeon;
-       ;
-     }
+    .card__text__title {
+      text-shadow: 0.022em 0.022em 0.022em rgb(255, 252, 252);
+      color: $dColorNeon;
+    }
   }
 }

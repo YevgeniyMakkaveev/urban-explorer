@@ -1,0 +1,21 @@
+.modal__map__wrapper{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  .map__modal__button{
+   min-width: 100px;
+   border-radius: 1em;
+   height: 50px;
+   margin: 1em auto;
+   cursor: pointer;
+   font-weight: 700;
+  }
+    .leaflet-container {
+     width: 100vw;
+     height: 100%;
+     z-index: 9999;
+    }
+}

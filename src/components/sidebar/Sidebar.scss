@@ -30,12 +30,28 @@
     border-radius: 50%;
     min-width: 55px;
     min-height: 55px;
+    z-index: 10;
+  }
+  .big__map__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1em;
+    cursor: pointer;
+    margin: 0.3em 0;
+    min-width: 55px;
+    min-height: 55px;
+    z-index: 10;
   }
 }
 
 @media screen and (min-width: $breakpoint-tablet) {
   .sidebar {
     display: block !important;
+    .leaflet-container {
+      width: 300px !important;
+      height: 300px !important;
+    }
   }
   .push__content {
     width: 330px !important;
@@ -44,5 +60,11 @@
 @media screen and (min-width: $breakpoint-pc) {
   .push__content {
     width: 530px !important;
+  }
+  .sidebar {
+    .leaflet-container {
+      width: 500px !important;
+      height: 500px !important;
+    }
   }
 }
