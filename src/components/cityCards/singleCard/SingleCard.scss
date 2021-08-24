@@ -8,8 +8,6 @@
   min-width: 400px;
   max-width: 850px;
   flex-grow: 2;
-
-
   .card__title {
     height: 10em;
     width: 100%;
@@ -30,7 +28,7 @@
     flex-direction: column;
   }
   .card__extra,
-  .card__summ{
+  .card__summ {
     font-size: 0.7em;
   }
   .card__score {
@@ -38,30 +36,37 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 0.5em;
   }
+  .card__delete__button {
+    margin: 1em auto;
+    width: 250px;
+    height: 30px;
+    font-weight: 700;
+    border-radius: 0.5em;
+  }
 }
 @media screen and (min-width: $breakpoint-tablet) {
   .single__card {
-     max-width: 600px !important;
+    max-width: 600px !important;
   }
   .card__summ,
   .card__body {
     margin: 0 2em;
   }
-   .card__summ {
-     font-size: 0.8em !important;
-   }
+  .card__summ {
+    font-size: 0.8em !important;
+  }
   .card__score {
     grid-template-columns: repeat(3, 1fr) !important;
   }
 }
 @media screen and (min-width: $breakpoint-pc) {
   .single__card {
-    min-height: 800px !important;
+    min-height: 820px !important;
     max-width: 800px !important;
   }
-.card__summ {
-  font-size: 1em !important;
-}
+  .card__summ {
+    font-size: 1em !important;
+  }
   .card__score {
     grid-template-columns: repeat(4, 1fr) !important;
   }

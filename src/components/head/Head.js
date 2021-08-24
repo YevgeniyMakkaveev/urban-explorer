@@ -25,6 +25,7 @@ const Head = () => {
   return (
     <div className="header">
       <div className="app__title bg__head">
+        <Element name="top"></Element>
         <div className="color__select">
           <p className="text__color">Color theme</p>
           <div
@@ -43,21 +44,21 @@ const Head = () => {
         <h1 className="title__block title__color">URBAN EXPLORER</h1>
       </div>
       <div className="search__wrapper">
-        <Element name="top">
-          <p className="title__text text__color">
-            Start search and click on the city name to start exploring!
-          </p>
-        </Element>
-        <form onSubmit={subm} className="search__list">
-          <input
-            className="search__input"
-            type="text"
-            value={search}
-            onChange={onChange}
-          />
-        </form>
+        <p className="title__text text__color">
+          Start search and click on the city name to start exploring!
+        </p>
+        <div className="search__list__holder">
+          <form onSubmit={subm} className="search__list">
+            <input
+              className="search__input"
+              type="text"
+              value={search}
+              onChange={onChange}
+            />
+          </form>
+          <ResultList search={search} submit={setSearch} />
+        </div>
       </div>
-      <ResultList search={search} submit={setSearch} />
     </div>
   );
 };

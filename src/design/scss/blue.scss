@@ -5,6 +5,9 @@
     background-color: rgba(38, 156, 192, 0.25);
     background-blend-mode: multiply;
   }
+  .loader__text__wrap {
+    background-color: $bCardColor;
+  }
   .title__color {
     text-shadow: 0.022em 0.022em 0.022em rgb(255, 252, 252);
     color: $bThemeRich;
@@ -26,14 +29,14 @@
   }
   .sidebar {
     background-color: $bThemeColor2;
-    
+
     .to__top__color {
       color: $bThemeRich;
     }
   }
   .modal__map__bg {
     background-color: $bCardColor;
-     border: 0.2em solid $bThemeColor3;
+    border: 0.2em solid $bThemeColor3;
   }
   .special__button__text {
     color: $bThemeRich;
@@ -60,6 +63,11 @@
     .card__text__title {
       text-shadow: 0.022em 0.022em 0.022em rgb(255, 252, 252);
       color: $bThemeRich;
+    }
+    .button__delete__color{
+       background-color: $bThemeColor3;
+       box-shadow: 0 5px ($bThemeColor2);
+       border: none
     }
   }
 }

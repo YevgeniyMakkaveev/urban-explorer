@@ -6,6 +6,7 @@ import CityCard from "../cityCards";
 import Sidebar from "../sidebar";
 import LoaderSpinner from "../loader";
 import BigMap from "../bigMap";
+import ErrorBoundry from "../errorBoundry";
 import "./App.scss";
 
 function App() {
@@ -39,11 +40,13 @@ function App() {
     return <h2 className="text__color"> {errorMsg}</h2>;
   }
   return (
-    <div className={`App ${currentTheme}`}>
-      {initSpinner}
-      {moreDataSpinner}
-      {whatToshow}
-    </div>
+    <ErrorBoundry>
+      <div className={`App ${currentTheme}`}>
+        {initSpinner}
+        {moreDataSpinner}
+        {whatToshow}
+      </div>
+    </ErrorBoundry>
   );
 }
 

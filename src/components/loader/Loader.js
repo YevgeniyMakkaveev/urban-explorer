@@ -13,7 +13,9 @@ const LoaderSpinner = ({ text }) => {
     <div className="spinner__wrapper">
       <div className="spinner__body">
         {chooseSpinner}
-        <p className="to__top__color">{text}</p>
+        <div className="loader__text__wrap">
+          <p className="to__top__color">{text}</p>
+        </div>
       </div>
     </div>
   );

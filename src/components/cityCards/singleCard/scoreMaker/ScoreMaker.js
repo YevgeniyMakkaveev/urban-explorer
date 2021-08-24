@@ -1,5 +1,8 @@
 import "./ScoreMaker.scss";
 const ScoreMaker = ({ score }) => {
+  if (!score) {
+    return "No data.";
+  }
   const backgroundPicker = (score) => {
     if (score < 3) {
       return "score__bad";

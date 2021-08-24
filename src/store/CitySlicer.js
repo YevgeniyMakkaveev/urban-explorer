@@ -1,6 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-import { fetchSearch } from "./SearchSlicer";
 
 const callApi = async (link) => {
   try {
@@ -64,6 +63,7 @@ const getCity = createSlice({
       state.city = res;
       state.currentView = view;
       state.loading = null;
+      console.log(state.city);
     },
     resetData(state) {
       state.city = null;
@@ -73,6 +73,15 @@ const getCity = createSlice({
     getView(state, action) {
       const view = action.payload;
       state.currentView = view;
+    },
+    deleteCity(state, action) {
+      const res = state.city.filter((city) => city.id !== action.payload.id);
+      if (res[0]) {
+        state.city = res;
+      } else {
+        state.city = null;
+        state.currentView = [0, 0];
+      }
     },
   },
   extraReducers: {
@@ -88,5 +97,5 @@ const getCity = createSlice({
 });
 
 const { getData } = getCity.actions;
-export const { getView } = getCity.actions;
+export const { getView, deleteCity } = getCity.actions;
 export default getCity.reducer;
