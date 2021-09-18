@@ -35,8 +35,11 @@
     }
   }
   .button__color {
+    cursor: pointer;
     background-color: $dTheme2;
     box-shadow: 0 10px 10px ($dColorNeon);
+      -moz-box-shadow: 0 10px 10px ($dColorNeon);
+    -webkit-box-shadow: 0 10px 10px ($dColorNeon);
     border: $dTheme1 solid 0.02em;
   }
   .sidebar {
@@ -64,6 +67,7 @@
       color: $dColorNeon;
     }
         .button__delete__color {
+          cursor: pointer;
           background-color: $dTheme2;
           box-shadow: 0 5px ($dTheme1);
           border: none
